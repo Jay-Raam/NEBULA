@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ebe9e3;
   --foreground: #1e1e1e;
@@ -10,14 +12,6 @@
   --brand-light-orange: #ff8500;
   --brand-green: #2c622c;
   --font-roboto: var(--font-roboto);
-}
-
-.dark {
-  --background: #181817;
-  --foreground: #f0f0f0;
-  --card: #242423;
-  --card-foreground: #f0f0f0;
-  --border: #333331;
 }
 
 @theme {
@@ -56,4 +50,3 @@ body {
   width: max-content;
   animation: marquee 20s linear infinite;
 }
-

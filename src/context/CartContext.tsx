@@ -34,7 +34,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     setIsMounted(true);
     try {
-      const storedCart = localStorage.getItem('halo_cart');
+      const storedCart = localStorage.getItem('nebula_cart');
       if (storedCart) {
         setCartItems(JSON.parse(storedCart));
       }
@@ -46,7 +46,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   // Save cart to localStorage whenever it changes (only on client)
   useEffect(() => {
     if (isMounted) {
-      localStorage.setItem('halo_cart', JSON.stringify(cartItems));
+      localStorage.setItem('nebula_cart', JSON.stringify(cartItems));
     }
   }, [cartItems, isMounted]);
 

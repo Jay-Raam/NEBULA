@@ -5,10 +5,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowLeft, 
-  Check, 
-  CreditCard, 
+import {
+  ArrowLeft,
+  Check,
+  CreditCard,
   HelpCircle,
   CheckCircle,
   Truck,
@@ -61,7 +61,7 @@ export default function CheckoutPage() {
 
   // Shipping State
   const [shippingMethod, setShippingMethod] = useState<'standard' | 'express'>('standard');
-  
+
   // Payment State
   const [cardName, setCardName] = useState('');
   const [cardNumber, setCardNumber] = useState('');
@@ -151,7 +151,7 @@ export default function CheckoutPage() {
 
         {/* Success Container */}
         <main className="flex-grow flex items-center justify-center py-16 px-4 md:px-8">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             className="w-full max-w-[550px] bg-white dark:bg-[#1f1f1e] p-8 md:p-12 shadow-xl rounded-sm text-center border border-black/5 dark:border-white/5"
@@ -197,7 +197,7 @@ export default function CheckoutPage() {
         {/* Minimal Footer */}
         <footer className="border-t border-black/10 dark:border-white/10 py-6 bg-black/5 dark:bg-black/20 text-[10px] uppercase font-bold text-foreground/50 tracking-wider">
           <div className="max-w-[1600px] mx-auto px-4 md:px-8 flex justify-center text-center">
-            <span>© HUMMEL A/S, ALL RIGHTS RESERVED</span>
+            <span>© NEBULA A/S, ALL RIGHTS RESERVED</span>
           </div>
         </footer>
       </div>
@@ -206,7 +206,7 @@ export default function CheckoutPage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#EBE9E3] dark:bg-[#1a1a19] text-black dark:text-white font-sans select-none relative">
-      
+
       {/* Minimal Header */}
       <header className="py-6 border-b border-black/10 dark:border-white/10 bg-white/20 dark:bg-black/20">
         <div className="max-w-[1600px] mx-auto px-4 md:px-8 flex justify-between items-center">
@@ -223,10 +223,10 @@ export default function CheckoutPage() {
 
       {/* Main Grid */}
       <main className="flex-grow max-w-[1600px] mx-auto w-full px-4 md:px-8 py-8 md:py-12 lg:py-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
-        
+
         {/* LEFT COLUMN: Progress forms (Col Span 7) */}
         <div className="lg:col-span-7 flex flex-col space-y-6">
-          
+
           {/* STAGE 1: ADDRESS */}
           <div className="border border-black/10 dark:border-white/10 bg-white/30 dark:bg-white/5 p-6 rounded-sm">
             <div className="flex items-center justify-between border-b border-black/10 dark:border-white/10 pb-4 mb-6">
@@ -244,8 +244,8 @@ export default function CheckoutPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex flex-col">
                     <label className="text-[10px] font-black tracking-wider uppercase text-foreground/75 mb-1.5">Your email</label>
-                    <input 
-                      type="email" 
+                    <input
+                      type="email"
                       placeholder="Example@example.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -255,8 +255,8 @@ export default function CheckoutPage() {
                   </div>
                   <div className="flex flex-col">
                     <label className="text-[10px] font-black tracking-wider uppercase text-foreground/75 mb-1.5">Confirm your email</label>
-                    <input 
-                      type="email" 
+                    <input
+                      type="email"
                       placeholder="Example@example.com"
                       value={confirmEmail}
                       onChange={(e) => setConfirmEmail(e.target.value)}
@@ -269,8 +269,8 @@ export default function CheckoutPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex flex-col">
                     <label className="text-[10px] font-black tracking-wider uppercase text-foreground/75 mb-1.5">First name</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       value={firstName}
                       onChange={(e) => setFirstName(e.target.value)}
                       className="bg-white dark:bg-white/5 border border-black/15 dark:border-white/15 px-3 py-2.5 rounded-none text-xs w-full focus:outline-none focus:border-brand-orange text-foreground font-medium"
@@ -279,8 +279,8 @@ export default function CheckoutPage() {
                   </div>
                   <div className="flex flex-col">
                     <label className="text-[10px] font-black tracking-wider uppercase text-foreground/75 mb-1.5">Last name</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       value={lastName}
                       onChange={(e) => setLastName(e.target.value)}
                       className="bg-white dark:bg-white/5 border border-black/15 dark:border-white/15 px-3 py-2.5 rounded-none text-xs w-full focus:outline-none focus:border-brand-orange text-foreground font-medium"
@@ -291,8 +291,8 @@ export default function CheckoutPage() {
 
                 <div className="flex flex-col">
                   <label className="text-[10px] font-black tracking-wider uppercase text-foreground/75 mb-1.5">Address</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     placeholder="E.g. 3 Stripes Street"
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
@@ -303,7 +303,7 @@ export default function CheckoutPage() {
 
                 {/* Additional Info Toggle */}
                 <div className="flex flex-col">
-                  <button 
+                  <button
                     type="button"
                     onClick={() => setShowAdditional(!showAdditional)}
                     className="text-[10px] font-black tracking-widest uppercase text-foreground/60 hover:text-foreground flex items-center space-x-1.5 select-none self-start"
@@ -312,14 +312,14 @@ export default function CheckoutPage() {
                   </button>
                   <AnimatePresence>
                     {showAdditional && (
-                      <motion.div 
+                      <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         className="overflow-hidden mt-2"
                       >
-                        <input 
-                          type="text" 
+                        <input
+                          type="text"
                           placeholder="Apartment, suite, unit, gate code etc."
                           value={additionalInfo}
                           onChange={(e) => setAdditionalInfo(e.target.value)}
@@ -333,8 +333,8 @@ export default function CheckoutPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex flex-col">
                     <label className="text-[10px] font-black tracking-wider uppercase text-foreground/75 mb-1.5">Zip code</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       value={zipCode}
                       onChange={(e) => setZipCode(e.target.value)}
                       className="bg-white dark:bg-white/5 border border-black/15 dark:border-white/15 px-3 py-2.5 rounded-none text-xs w-full focus:outline-none focus:border-brand-orange text-foreground font-medium"
@@ -343,8 +343,8 @@ export default function CheckoutPage() {
                   </div>
                   <div className="flex flex-col">
                     <label className="text-[10px] font-black tracking-wider uppercase text-foreground/75 mb-1.5">City</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       value={city}
                       onChange={(e) => setCity(e.target.value)}
                       className="bg-white dark:bg-white/5 border border-black/15 dark:border-white/15 px-3 py-2.5 rounded-none text-xs w-full focus:outline-none focus:border-brand-orange text-foreground font-medium"
@@ -356,7 +356,7 @@ export default function CheckoutPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex flex-col">
                     <label className="text-[10px] font-black tracking-wider uppercase text-foreground/75 mb-1.5">Country</label>
-                    <select 
+                    <select
                       value={country}
                       onChange={(e) => setCountry(e.target.value)}
                       className="bg-white dark:bg-white/5 border border-black/15 dark:border-white/15 px-3 py-2.5 rounded-none text-xs w-full focus:outline-none focus:border-brand-orange text-foreground font-semibold uppercase"
@@ -373,8 +373,8 @@ export default function CheckoutPage() {
                       <span className="flex items-center justify-center border border-r-0 border-black/15 dark:border-white/15 px-3 py-2.5 bg-black/5 dark:bg-white/5 text-xs text-foreground/60 select-none font-bold">
                         +43
                       </span>
-                      <input 
-                        type="tel" 
+                      <input
+                        type="tel"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         className="bg-white dark:bg-white/5 border border-black/15 dark:border-white/15 px-3 py-2.5 rounded-none text-xs w-full focus:outline-none focus:border-brand-orange text-foreground font-medium"
@@ -385,8 +385,8 @@ export default function CheckoutPage() {
                 </div>
 
                 <div className="flex items-center space-x-2 pt-2">
-                  <input 
-                    type="checkbox" 
+                  <input
+                    type="checkbox"
                     id="diff-delivery"
                     checked={differentDelivery}
                     onChange={(e) => setDifferentDelivery(e.target.checked)}
@@ -401,7 +401,7 @@ export default function CheckoutPage() {
                   <p className="text-[10px] font-black text-red-500 tracking-wide uppercase pt-1">{addressError}</p>
                 )}
 
-                <button 
+                <button
                   type="submit"
                   className="py-4 px-8 bg-black dark:bg-white text-white dark:text-black hover:opacity-90 text-xs font-black tracking-widest uppercase rounded-sm shadow-md transition-all w-full md:w-auto"
                 >
@@ -413,7 +413,7 @@ export default function CheckoutPage() {
                 <p><span className="opacity-55">Name:</span> {firstName} {lastName}</p>
                 <p><span className="opacity-55">Email:</span> {email}</p>
                 <p><span className="opacity-55">Address:</span> {address}, {zipCode} {city}, {country}</p>
-                <button 
+                <button
                   onClick={() => setStep('address')}
                   className="text-[10px] text-brand-orange font-black uppercase hover:underline mt-2 flex items-center space-x-1"
                 >
@@ -438,12 +438,12 @@ export default function CheckoutPage() {
             {step === 'shipping' && (
               <form onSubmit={handleShippingSubmit} className="space-y-6">
                 <div className="space-y-3">
-                  
+
                   {/* Option 1: Standard */}
                   <label className={`flex items-center justify-between border p-4 cursor-pointer transition-colors ${shippingMethod === 'standard' ? 'border-brand-orange bg-brand-orange/5' : 'border-black/10 dark:border-white/10 bg-white dark:bg-black/20'}`}>
                     <div className="flex items-center space-x-3">
-                      <input 
-                        type="radio" 
+                      <input
+                        type="radio"
                         name="shipping"
                         checked={shippingMethod === 'standard'}
                         onChange={() => setShippingMethod('standard')}
@@ -460,8 +460,8 @@ export default function CheckoutPage() {
                   {/* Option 2: Express */}
                   <label className={`flex items-center justify-between border p-4 cursor-pointer transition-colors ${shippingMethod === 'express' ? 'border-brand-orange bg-brand-orange/5' : 'border-black/10 dark:border-white/10 bg-white dark:bg-black/20'}`}>
                     <div className="flex items-center space-x-3">
-                      <input 
-                        type="radio" 
+                      <input
+                        type="radio"
                         name="shipping"
                         checked={shippingMethod === 'express'}
                         onChange={() => setShippingMethod('express')}
@@ -478,13 +478,13 @@ export default function CheckoutPage() {
                 </div>
 
                 <div className="flex space-x-3 pt-2">
-                  <button 
+                  <button
                     type="submit"
                     className="py-4 px-8 bg-black dark:bg-white text-white dark:text-black hover:opacity-90 text-xs font-black tracking-widest uppercase rounded-sm shadow-md transition-all"
                   >
                     PROCEED TO PAYMENT METHOD
                   </button>
-                  <button 
+                  <button
                     type="button"
                     onClick={() => setStep('address')}
                     className="py-4 px-6 bg-transparent text-foreground hover:opacity-75 text-xs font-black tracking-widest uppercase transition-all"
@@ -517,12 +517,12 @@ export default function CheckoutPage() {
 
             {step === 'payment' && (
               <form onSubmit={handlePaymentSubmit} className="space-y-4">
-                
+
                 {/* Credit Card inputs */}
                 <div className="flex flex-col">
                   <label className="text-[10px] font-black tracking-wider uppercase text-foreground/75 mb-1.5">Cardholder name</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     value={cardName}
                     onChange={(e) => setCardName(e.target.value)}
                     className="bg-white dark:bg-white/5 border border-black/15 dark:border-white/15 px-3 py-2.5 rounded-none text-xs w-full focus:outline-none focus:border-brand-orange text-foreground font-medium"
@@ -533,8 +533,8 @@ export default function CheckoutPage() {
                 <div className="flex flex-col">
                   <label className="text-[10px] font-black tracking-wider uppercase text-foreground/75 mb-1.5">Card number</label>
                   <div className="relative">
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       placeholder="0000 0000 0000 0000"
                       value={cardNumber}
                       onChange={(e) => setCardNumber(e.target.value)}
@@ -549,8 +549,8 @@ export default function CheckoutPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex flex-col">
                     <label className="text-[10px] font-black tracking-wider uppercase text-foreground/75 mb-1.5">Expiry date</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       placeholder="MM/YY"
                       value={cardExpiry}
                       onChange={(e) => setCardExpiry(e.target.value)}
@@ -561,8 +561,8 @@ export default function CheckoutPage() {
                   </div>
                   <div className="flex flex-col">
                     <label className="text-[10px] font-black tracking-wider uppercase text-foreground/75 mb-1.5">CVV</label>
-                    <input 
-                      type="password" 
+                    <input
+                      type="password"
                       placeholder="***"
                       value={cardCvv}
                       onChange={(e) => setCardCvv(e.target.value)}
@@ -578,14 +578,14 @@ export default function CheckoutPage() {
                 )}
 
                 <div className="flex space-x-3 pt-4 border-t border-black/10 dark:border-white/10">
-                  <button 
+                  <button
                     type="submit"
                     className="py-4 px-8 bg-[#FF6600] hover:bg-[#ff771a] text-white text-xs font-black tracking-widest uppercase rounded-sm shadow-md transition-all flex-1 md:flex-none flex items-center justify-center space-x-2"
                   >
                     <span>PLACE ORDER</span>
                     <Check className="w-4 h-4" />
                   </button>
-                  <button 
+                  <button
                     type="button"
                     onClick={() => setStep('shipping')}
                     className="py-4 px-6 bg-transparent text-foreground hover:opacity-75 text-xs font-black tracking-widest uppercase transition-all"
@@ -602,7 +602,7 @@ export default function CheckoutPage() {
 
         {/* RIGHT COLUMN: Order Summary (Col Span 5) */}
         <div className="lg:col-span-5 flex flex-col space-y-6">
-          
+
           {/* Summary Card */}
           <div className="border border-black/10 dark:border-white/10 bg-white/40 dark:bg-white/5 p-6 rounded-sm flex flex-col">
             <h2 className="text-sm font-black tracking-widest uppercase border-b border-black/10 dark:border-white/10 pb-3 mb-4 text-foreground">
@@ -651,7 +651,7 @@ export default function CheckoutPage() {
 
             {/* Main Action Button duplicated if on desktop and in Address Step */}
             {step === 'address' && (
-              <button 
+              <button
                 onClick={handleAddressSubmit}
                 className="w-full mt-6 py-4 bg-[#FF6600] hover:bg-[#ff771a] text-white text-xs font-black tracking-widest uppercase rounded-sm transition-all shadow-md select-none hidden md:block"
               >
@@ -662,7 +662,7 @@ export default function CheckoutPage() {
 
           {/* Discount Code Section */}
           <div className="border border-black/10 dark:border-white/10 bg-white/40 dark:bg-white/5 p-4 rounded-sm">
-            <button 
+            <button
               onClick={() => setShowDiscount(!showDiscount)}
               className="w-full flex items-center justify-between text-xs font-black tracking-widest uppercase text-foreground hover:opacity-85"
             >
@@ -671,21 +671,21 @@ export default function CheckoutPage() {
             </button>
             <AnimatePresence>
               {showDiscount && (
-                <motion.form 
+                <motion.form
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
                   onSubmit={handleApplyDiscount}
                   className="overflow-hidden mt-3 flex space-x-2"
                 >
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     placeholder="ENTER CODE (e.g. EXTRA10)"
                     value={discountCode}
                     onChange={(e) => setDiscountCode(e.target.value)}
                     className="bg-white dark:bg-white/5 border border-black/15 dark:border-white/15 px-3 py-2 text-xs flex-grow focus:outline-none focus:border-brand-orange text-foreground font-semibold uppercase"
                   />
-                  <button 
+                  <button
                     type="submit"
                     className="px-4 py-2 bg-black dark:bg-white text-white dark:text-black hover:opacity-90 text-[10px] font-black tracking-widest uppercase rounded-none shadow-sm transition-all"
                   >
@@ -702,7 +702,7 @@ export default function CheckoutPage() {
             <div className="flex items-center space-x-3 text-[10px] font-bold uppercase text-foreground/60 tracking-wider">
               <span>Pay with promo coupon</span>
             </div>
-            
+
             <div className="border-t border-black/10 dark:border-white/10 pt-4 flex flex-col space-y-1">
               <span className="text-xs font-black uppercase text-foreground flex items-center space-x-1">
                 <HelpCircle className="w-3.5 h-3.5 mr-1" />
@@ -719,82 +719,82 @@ export default function CheckoutPage() {
 
       {/* Trust Badges & FAQ Section */}
       <div className="max-w-[1200px] mx-auto w-full px-4 md:px-8 pb-16 border-t border-black/10 dark:border-white/10 pt-12 text-left">
-          
-          {/* Trust Badges Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="flex items-center space-x-3 text-xs font-bold uppercase tracking-wider text-foreground/80">
-              <div className="p-2 bg-black/5 dark:bg-white/5 rounded-full">
-                <ShieldCheck className="w-4 h-4 text-brand-green" />
-              </div>
-              <div>
-                <p className="font-black">SECURE CHECKOUT</p>
-                <p className="text-[9px] text-foreground/45">256-bit SSL encrypted</p>
-              </div>
+
+        {/* Trust Badges Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          <div className="flex items-center space-x-3 text-xs font-bold uppercase tracking-wider text-foreground/80">
+            <div className="p-2 bg-black/5 dark:bg-white/5 rounded-full">
+              <ShieldCheck className="w-4 h-4 text-brand-green" />
             </div>
-            <div className="flex items-center space-x-3 text-xs font-bold uppercase tracking-wider text-foreground/80">
-              <div className="p-2 bg-black/5 dark:bg-white/5 rounded-full">
-                <Truck className="w-4 h-4 text-brand-orange" />
-              </div>
-              <div>
-                <p className="font-black">RELIABLE COURIERS</p>
-                <p className="text-[9px] text-foreground/45">DHL &amp; GLS partners</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-3 text-xs font-bold uppercase tracking-wider text-foreground/80">
-              <div className="p-2 bg-black/5 dark:bg-white/5 rounded-full">
-                <RotateCcw className="w-4 h-4 text-foreground" />
-              </div>
-              <div>
-                <p className="font-black">HASSLE-FREE RETURNS</p>
-                <p className="text-[9px] text-foreground/45">14-day window policy</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-3 text-xs font-bold uppercase tracking-wider text-foreground/80">
-              <div className="p-2 bg-black/5 dark:bg-white/5 rounded-full">
-                <MapPin className="w-4 h-4 text-foreground" />
-              </div>
-              <div>
-                <p className="font-black">DANISH HERITAGE</p>
-                <p className="text-[9px] text-foreground/45">Shipped from Denmark</p>
-              </div>
+            <div>
+              <p className="font-black">SECURE CHECKOUT</p>
+              <p className="text-[9px] text-foreground/45">256-bit SSL encrypted</p>
             </div>
           </div>
-
-          {/* Checkout FAQ Accordion */}
-          <div className="border-t border-black/10 dark:border-white/10 pt-12 max-w-[800px] mx-auto">
-            <h3 className="text-xs font-black tracking-widest uppercase mb-6 text-foreground/60">
-              CHECKOUT ASSISTANCE &amp; FAQS
-            </h3>
-            <div className="space-y-4">
-              {checkoutFaqs.map((faq, idx) => (
-                <div key={idx} className="border-b border-black/10 dark:border-white/10 pb-4">
-                  <button
-                    type="button"
-                    onClick={() => setOpenCheckoutFaq(openCheckoutFaq === idx ? null : idx)}
-                    className="w-full flex items-center justify-between text-xs font-black tracking-wider uppercase hover:text-brand-orange transition-colors focus:outline-none"
-                  >
-                    <span>{faq.q}</span>
-                    <span className="text-sm font-normal">{openCheckoutFaq === idx ? '−' : '+'}</span>
-                  </button>
-                  <AnimatePresence initial={false}>
-                    {openCheckoutFaq === idx && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.25 }}
-                        className="overflow-hidden mt-3 text-xs leading-relaxed text-foreground/75 font-semibold"
-                      >
-                        <p>{faq.a}</p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
+          <div className="flex items-center space-x-3 text-xs font-bold uppercase tracking-wider text-foreground/80">
+            <div className="p-2 bg-black/5 dark:bg-white/5 rounded-full">
+              <Truck className="w-4 h-4 text-brand-orange" />
+            </div>
+            <div>
+              <p className="font-black">RELIABLE COURIERS</p>
+              <p className="text-[9px] text-foreground/45">DHL &amp; GLS partners</p>
             </div>
           </div>
-
+          <div className="flex items-center space-x-3 text-xs font-bold uppercase tracking-wider text-foreground/80">
+            <div className="p-2 bg-black/5 dark:bg-white/5 rounded-full">
+              <RotateCcw className="w-4 h-4 text-foreground" />
+            </div>
+            <div>
+              <p className="font-black">HASSLE-FREE RETURNS</p>
+              <p className="text-[9px] text-foreground/45">14-day window policy</p>
+            </div>
+          </div>
+          <div className="flex items-center space-x-3 text-xs font-bold uppercase tracking-wider text-foreground/80">
+            <div className="p-2 bg-black/5 dark:bg-white/5 rounded-full">
+              <MapPin className="w-4 h-4 text-foreground" />
+            </div>
+            <div>
+              <p className="font-black">DANISH HERITAGE</p>
+              <p className="text-[9px] text-foreground/45">Shipped from Denmark</p>
+            </div>
+          </div>
         </div>
+
+        {/* Checkout FAQ Accordion */}
+        <div className="border-t border-black/10 dark:border-white/10 pt-12 max-w-[800px] mx-auto">
+          <h3 className="text-xs font-black tracking-widest uppercase mb-6 text-foreground/60">
+            CHECKOUT ASSISTANCE &amp; FAQS
+          </h3>
+          <div className="space-y-4">
+            {checkoutFaqs.map((faq, idx) => (
+              <div key={idx} className="border-b border-black/10 dark:border-white/10 pb-4">
+                <button
+                  type="button"
+                  onClick={() => setOpenCheckoutFaq(openCheckoutFaq === idx ? null : idx)}
+                  className="w-full flex items-center justify-between text-xs font-black tracking-wider uppercase hover:text-brand-orange transition-colors focus:outline-none"
+                >
+                  <span>{faq.q}</span>
+                  <span className="text-sm font-normal">{openCheckoutFaq === idx ? '−' : '+'}</span>
+                </button>
+                <AnimatePresence initial={false}>
+                  {openCheckoutFaq === idx && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.25 }}
+                      className="overflow-hidden mt-3 text-xs leading-relaxed text-foreground/75 font-semibold"
+                    >
+                      <p>{faq.a}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
 
       {/* Minimal Footer */}
       <footer className="border-t border-black/10 dark:border-white/10 py-8 bg-black/5 dark:bg-black/20 text-[10px] uppercase font-bold text-foreground/50 tracking-wider">
@@ -802,7 +802,7 @@ export default function CheckoutPage() {
           <div className="flex items-center space-x-1 cursor-pointer hover:opacity-75 transition-opacity">
             <span>International (EUR)</span>
           </div>
-          <span>© HUMMEL A/S, ALL RIGHTS RESERVED</span>
+          <span>© NEBULA A/S, ALL RIGHTS RESERVED</span>
           <div className="flex items-center space-x-6 text-foreground/60">
             <Link href="/terms-and-conditions" className="hover:underline">Terms and conditions</Link>
             <Link href="/privacy-policy" className="hover:underline">Privacy policy</Link>

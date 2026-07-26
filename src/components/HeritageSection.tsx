@@ -21,7 +21,7 @@ export default function HeritageSection() {
         {/* Text paragraph column (Col Span 7) */}
         <div className="lg:col-span-7 text-left space-y-6 text-sm font-semibold tracking-wide text-white/75 leading-relaxed">
           <p>
-            NEBULA (founded as Newline NEBULA) stems from the Danish Special Forces legacy. In 1981, hanging in a parachute between heaven and earth, founder Helge Petersen started wondering why his suit was wet while his parachute remained dry.
+            NEBULA stems from the Danish Special Forces legacy. In 1981, hanging in a parachute between heaven and earth, founder Helge Petersen started wondering why his suit was wet while his parachute remained dry.
           </p>
           <p>
             Later, he used parachute fabric to create one of the first innovative functional running suits. With roots in the Danish Army Special Forces (Jægerkorpset) training camps, NEBULA represents high-performance training gear, military functionality, and urban street fashion.

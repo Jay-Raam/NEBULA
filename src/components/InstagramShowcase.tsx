@@ -42,7 +42,7 @@ export default function InstagramShowcase() {
           WEAR YOUR MISSION
         </h2>
         <p className="text-xs font-semibold tracking-widest text-foreground/45 uppercase mt-2">
-          TAG @NEWLINE.NEBULA TO BE FEATURED
+          TAG @NEBULA.OFFICIAL TO BE FEATURED
         </p>
       </div>
 
@@ -86,7 +86,7 @@ export default function InstagramShowcase() {
 
               {/* Bottom tag */}
               <div className="text-right text-[9px] font-black tracking-widest uppercase opacity-60">
-                #NEWLINENEBULA
+                #NEBULA
               </div>
             </div>
 
