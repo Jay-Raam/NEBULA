@@ -139,13 +139,13 @@ export default function ProductClient({ params }: PageProps) {
     try {
       const stored = localStorage.getItem('recently_viewed_products');
       let list = stored ? JSON.parse(stored) : [];
-      list = list.filter((item) => item !== slug);
+      list = list.filter((item: string) => item !== slug);
       list.unshift(slug);
       const trimmed = list.slice(0, 5);
       localStorage.setItem('recently_viewed_products', JSON.stringify(trimmed));
       const resolvedList = trimmed
-        .filter((s) => s !== slug)
-        .map((s) => {
+        .filter((s: string) => s !== slug)
+        .map((s: string) => {
           const item = productDatabase[s];
           if (!item) return null;
           return {
@@ -158,7 +158,7 @@ export default function ProductClient({ params }: PageProps) {
         .filter(Boolean);
       setRecentlyViewed(resolvedList);
     } catch (e) {
-      print('Error tracking recently viewed products', e)
+      console.error('Error tracking recently viewed products', e);
     }
   }, [slug]);
 

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import PromoBar from '@/components/PromoBar';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import NewsletterForm from '@/components/NewsletterForm';
 
 export const metadata: Metadata = {
   title: "NEBULA | Training Journals & Editorials",
@@ -115,10 +116,7 @@ export default function JournalsPage() {
             <p className="text-xs font-semibold text-black/60 leading-relaxed">
               Sign up to receive our monthly journals, product drop dates, and training specifications straight to your inbox.
             </p>
-            <form className="flex space-x-2 pt-2" onSubmit={(e) => e.preventDefault()}>
-              <input type="email" placeholder="YOUR EMAIL ADDRESS" className="bg-white border border-black/15 px-3 py-2 text-xs flex-grow focus:outline-none focus:border-brand-orange font-semibold uppercase text-black" required />
-              <button type="submit" className="px-6 py-2 bg-black text-white text-xs font-black tracking-widest uppercase rounded-sm transition-all shadow-sm">SUBSCRIBE</button>
-            </form>
+            <NewsletterForm />
           </div>
 
         </div>
